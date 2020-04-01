@@ -1,0 +1,285 @@
+form {
+	width: 100%;
+	@include box-sizing;
+	@include clear();
+
+	.obs {
+		font-size: .9rem;
+		line-height: .9rem;
+		font-style: italic;
+		font-weight: $light;
+		margin-bottom: 20px;
+		display: block;
+	}
+
+	input, textarea {
+		max-width: 100%;
+		width: 100%;
+		font-size: 1.125rem; 
+		text-transform: uppercase;
+		color: #ffffff;
+		font-weight: $light;
+		background-color: $cor5;
+		padding: 0 20px;
+		border-radius: 7px;
+		font-style: normal;
+		@include animacao;
+		@include box-sizing;
+
+		@include placeholder{
+			opacity: 1;
+			color: #ffffff;
+		}
+	}
+
+	input[type='text'], input[type='email'], input[type='password'] {
+		height: 60px;
+		line-height: 60px;	
+	}
+
+	textarea {
+		line-height: 1.25rem;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		height: 363px;
+		resize: none;
+	}
+
+	fieldset {
+		margin-bottom: 40px;
+		width: 100%;
+		float: left;
+		//clear: both;
+
+		&:first-chid {
+			margin-top: 0;
+		}
+	}
+
+	/*&.form-busca {
+		fieldset {
+			padding-right: 50px!important;
+			position: relative;
+			margin: 0;
+			@include box-sizing;
+
+			input {
+				height: 40px;
+				line-height: 40px;
+				color: #ffffff;
+				background-color: $cor1;
+				border: none;
+
+				@include placeholder{
+					//opacity: 0.75;
+					color: #ffffff;
+				}
+			}
+
+			button {
+				width: 40px;
+				height: 40px;
+				line-height: 46px;
+				text-align: center;
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 0;
+				background-color: transparent;
+
+				i {
+					font-size: 2rem;
+					color: $cor1;
+				}
+
+				&:hover {
+					i {
+						color: $cor2;
+					}
+				}
+			}
+		}
+	}*/
+
+	&.fale-conosco {
+		.row [class*="col-"] {
+			&.esq {
+				padding-right: 60px;
+			}
+
+			&.dir {
+				padding-left: 60px;
+			}
+		}
+		/*max-width: 500px;
+		margin-top: 20px;
+
+		label {
+			font-size: 1.125rem;
+			line-height: 1.5rem;
+		}
+
+		textarea {
+			height: 115px;
+		}*/
+	}
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #4778d9!important;
+}
+
+button, input[type='submit'], .button { 
+	display: inline-block;
+	width: auto;
+	height: 54px;
+	line-height: 48px;
+	color: #ffffff;
+	font-weight: $bold;
+	font-size: 1.125rem; 
+	text-transform: uppercase;
+	text-align: center;
+	padding: 0 40px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 3px solid;
+	background-color: transparent;
+	@include animacao;
+	@include box-sizing();
+
+	i {
+		@include animacao;
+	}
+
+	&:hover {
+		background-color: #ffffff;
+		color: #ffffff;
+	}
+
+	&.grande {
+		line-height: 53px;
+		height: 53px;
+		font-size: 1.25rem;
+		padding: 0 25px;
+	}
+
+	&.pequeno {
+		height: 39px;
+		line-height: 39px;
+		font-size: .75rem;
+		text-transform: none;
+	}
+
+	&.mini {
+		height: 29px;
+		line-height: 29px;
+		font-size: .65rem;
+		padding: 0 20px;
+		text-transform: none;
+	}
+
+	&.btn-full {
+		width: 100%;
+	}
+
+	&.enviar {
+		float: right;
+		color: $cor5; 
+		border-color: $cor5; 
+
+		&:hover {
+			color: #ffffff;
+			background-color: $cor5;
+		}
+	}
+}
+
+.select {
+	overflow: hidden;
+	padding: 0 0 0 10px;
+	margin-bottom: 20px;
+	display: block;
+	position: relative;
+	background-color: #ffffff;
+	line-height: 43px;
+	height: 43px;
+	border-bottom: 1px solid $cor-txt;
+	font-style: normal;
+
+	@include box-sizing();
+
+	select {
+		width: 88%;
+		padding-right: 135px;
+		background-color: transparent;
+		font-weight: $light;
+		font-size: 1rem; 
+		color: $cor-txt;
+		box-sizing: content-box;
+		position: relative;
+		z-index: 99;
+		cursor: pointer;
+	}
+
+	&:after {
+		content: "\f078";
+		font-weight: 900;
+		position: absolute;
+		right: 13px;
+		top: 15px;
+		font-family: 'Font Awesome 5 Free';
+		cursor: pointer;
+		height: 15px;
+		line-height: 15px;
+		z-index: 0;
+	}
+}
+
+.txt-legenda-btn {
+	padding-left: 15px;
+	font-weight: $regular;
+
+	a {
+		font-weight: $regular;		
+	}
+}
+
+/*input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder {  
+	opacity: 1;	
+}
+
+input::-webkit-input-placeholder {
+    opacity: 0;
+}
+*/
+.msg-form {
+	margin-top: 20px;
+	font-size: 1rem;
+
+	strong {
+		display: block;
+		font-size: 1rem;
+	}
+
+	&.erro {
+		color: $vermelho;
+
+		strong, i {
+			color: $vermelho;
+		}
+	}
+
+	&.ok {
+		color: $verde;
+	}
+}
+
+
+.box-form-bg {
+	padding: 40px;
+
+	h3 {
+		margin-top: 0!important;
+	}
+}

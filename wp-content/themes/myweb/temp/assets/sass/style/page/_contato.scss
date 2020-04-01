@@ -1,0 +1,44 @@
+.contato-info {
+	width: 100%;
+	position: relative;
+	padding-bottom: 60px;
+	@include clear;
+
+	&:before {
+		content: '';
+		height: 80px;
+		width: 100%;
+		background-color: $cor5;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.container {
+		display: table;
+	}
+
+	.item-contato-info {
+		width: 33.3333%;
+		text-align: center;
+		display: table-cell;
+
+		.ico-contato {
+			width: 100%;
+			height: 80px;
+			padding: 15px 0	; 
+		}
+
+		.txt-contato {
+			padding-top: 20px;
+			span, a {
+				font-weight: $bold;
+				font-size: 1.125rem;
+			}
+
+			a:hover {
+				color: $cor5;
+			}
+		}
+	}
+}

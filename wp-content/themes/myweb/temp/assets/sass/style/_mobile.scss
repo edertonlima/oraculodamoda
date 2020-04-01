@@ -1,0 +1,656 @@
+.mobile-750px-show {
+	display: none;
+}
+
+@media all and (max-width: 1280px){
+	.footer {
+		&:before {
+			top: -15px;
+			height: 37px;
+		}
+
+		h1 {
+			width: 140px;
+			top: -100px;
+
+			&:before {
+				width: 800px;
+				top: -13px;
+				left: 100px;
+				background-size: 100%;
+			}
+		}
+
+		[class*="col-"] {
+			max-width: 100%;
+		}
+
+		.col-5, .col-4 {
+			width: 50%;
+		}
+
+		.col-5 {
+			.sobre, h4 {
+				margin-left: 20% !important;
+			}
+		}
+
+		.col-3 {
+			width: 100%;
+			margin-top: 50px;
+			@include clear;
+
+			.contato-item {
+				span {
+					width: auto;
+				}
+				
+				h4 {
+					display: inline;
+					width: auto;
+				}
+			}
+
+			.redes-sociais {
+				i {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+
+
+@media all and (max-width: 1200px){
+	.detalhe-prod {
+		.img-produto {
+			height: auto!important;
+		}
+		.modo-preparo {
+			.item-preparo {
+				li {
+					padding-right: 20px;
+					.ico-preparo {
+						width: 150px;
+					}
+
+					.txt-preparo {
+						padding-left: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 980px){
+
+	.header.scroll_menu:not(.ativo) h1 {
+		left: 0;
+	}
+
+	.detalhe-prod {
+		.row {
+			 .col-6 {
+				width: 100%;
+				max-width: 590px;
+				display: block;
+				margin: 0 auto 60px;
+				float: none;
+			}
+
+			.cont-modo-preparo {
+				margin-bottom: 0;
+			}
+		}
+		.content {
+			&.ingredientes {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.img-produto {
+			
+		}
+		.modo-preparo {
+			h3 {
+				text-align: center;
+
+				i {
+					display: inline-block;
+				}
+			}
+			.item-preparo {
+				display: none;
+
+				&.on {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.list-receita {
+		.bloco-img, .owl-carousel {
+			height: 40vh;
+		}
+	}
+
+	.list-prod {
+		.row {
+			.col-4 {
+				width: 50%;
+				max-width: 50%;
+			}
+		}
+	}
+
+	.bloco-img {
+		&.grande {
+			height: 40vh;
+		}
+	}
+
+	form {
+		&.fale-conosco {
+			.row {
+				[class*="col-"] {
+					&.esq {
+						padding-right: 10px;
+					}
+
+					&.dir {
+						padding-left: 10px;
+					}
+				}
+			}
+		}
+
+		fieldset {
+			margin-bottom: 20px;
+		}
+	}
+
+	.nav {
+		&.nav-principal {
+			ul {
+				top: -100vh;
+				padding: 150px 20px 0 20px;
+				height: 100vh;
+				position: fixed;
+				background-color: $cor1;
+				left: 0;
+				margin: 0;
+				z-index: 999;
+
+				li {
+					display: block;
+					width: auto;
+					max-width: 200px;
+					//text-align: right;
+					//float: right;
+					@include clear;
+
+					&.logo {
+						float: left;
+						position: relative;
+						top: calc( 100vh + -65px );
+						left: -10px;
+						//top: 100vh + 100px);
+
+						h1 {
+							//margin-top: 100px;
+						}
+					}
+
+					&:not(.logo) {
+						margin: 5px auto;
+
+						a {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+
+		&.nav-topo {
+			margin: 15px 0 15px;
+
+			ul {
+				li {
+
+				}
+			}
+		}
+
+		&.nav.nav-footer {
+			margin-top: 10px;
+		}
+
+		.menu-mobile {
+			display: block;
+
+			i {
+				&.fa-bars {
+					display: block;
+				}
+
+				&.fa-times {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.scroll_menu:not(.ativo) {
+		.nav {
+			&.nav-principal {
+				margin-top: 35px;
+				ul {
+					position: fixed;
+
+					li {
+						&.logo {
+							top: calc( 100vh + -115px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.ativo {
+		.nav {
+			&.nav-principal {
+				ul {
+					position: fixed;
+
+					li {
+						&.logo {
+							top: -65px;
+							margin-bottom: 60px;
+						}
+
+						&:not(.logo) {
+							padding: 15px 0;
+
+							&.ativo {
+								//padding: 10px;
+							}
+						}
+
+						&:hover, &.ativo {
+							&:before {
+								height: 3px;
+								width: 100%;
+								left: 0;
+								top: auto;
+								bottom: 0;
+							}
+						}
+
+					}
+				}
+			}
+
+			.menu-mobile {
+				//top: -65px;
+			}
+		}
+	}
+
+	h1 {
+		height: auto;
+		width: 140px;
+	}
+
+	.footer {
+		&:before {
+			top: -20px;
+		}
+
+		h1 {
+			top: -100px;
+
+			&:before {
+				width: 615px;
+				top: -5px;
+				left: 110px;
+			}
+		}
+
+		.col-5 {
+			h4 {
+				margin-top: 90px;
+			}
+		}
+
+		p.sobre {
+			max-width: 100%;
+		}
+
+		.col-3 {
+			margin-top: 20px;
+		}
+	}
+
+	.box-content {
+		.container-mobile {
+			padding: 0 20px;
+		}
+	}
+}
+
+
+
+@media all and (max-width: 750px){
+
+	.mobile-750px-hide {
+		display: none;
+	}
+
+	.mobile-750px-show {
+		display: block;
+	}
+
+	.list-prod {
+		.row {
+			.col-4 {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+
+	.list-receita {
+		.tit-slide-receita {
+			display: block;
+			margin: 0 auto;
+			width: 210px;
+		}
+	}
+
+	.contato-info {
+		&:before {
+			display: none;
+		}
+
+		.container {
+			padding: 0;
+		}
+
+		.item-contato-info {
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			position: relative;
+
+			&:before {
+				content: '';
+				height: 80px;
+				width: 100%;
+				background-color: $cor5;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 0;
+			}
+
+			.ico-contato {
+				z-index: 1;
+				position: relative;
+			}
+		}
+	}
+
+	form {
+		textarea {
+			height: 150px;
+		}
+	}
+	
+	.title-bottom {
+		text-align: center;
+		@include clear;
+
+		h2 {
+			position: relative;
+			margin: 70vh auto 0;
+			padding: 0 40px;
+			top: -40px;
+			bottom: auto;
+			left: auto;
+			width: auto;
+			max-width: none;
+			display: inline-block;
+		}
+	}
+
+	.box-content {
+		.content {
+			.destaque {
+				span {
+					padding: 0px;
+				}
+
+				&:after, &:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.list-receita {
+		.bloco-img, .owl-carousel {
+			height: 70vh;
+			text-align: center;
+		}
+
+		h2 {
+			padding: 0 40px;
+		}
+	}
+
+	.list-linha-prod {
+		.bloco-img {
+			height: 75vh;
+		}
+
+		.row .col-6 {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		.carousel-itens-produtos {
+		}	
+	}
+
+	.bloco-img {
+		&.grande {
+			height: 70vh;
+		}
+	}
+
+	h2 {
+		font-size: 1.75rem;
+		width: auto;
+		display: inline-block;
+
+		&.title-solo-bottom {
+			width: 90%;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+
+	h3 {
+		padding: 30px 0;
+	}
+
+	.block-img-hide {
+		background: none!important;
+		height: auto!important;
+		margin: 0;
+
+		h2 {
+			position: relative;
+			bottom: 0;
+			top: 0;
+			left: 0;
+			margin: 0 auto;
+		}
+	}
+
+	.row {
+		[class*="col-"] {
+			width: 100%;
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.footer {
+		margin-top: 50px;
+
+		&:before {
+			display: none;
+		}
+
+		h1 {
+			top: -100px;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.col-5 {
+			.sobre, h4 {
+				display: none;
+			}
+		}
+
+		.col-4 {
+			display: none;
+		}
+
+		.col-3 {
+			margin-top: 0;
+		}
+
+		.contato-item {
+			text-align: center;
+			@include clear;	
+
+			span {
+				display: inline-block;
+				text-align: left;
+				width: auto;
+			}
+
+			h4 {
+				width: auto;
+
+				&.tel-2 {
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
+			}
+		}
+
+		.redes-sociais {
+			width: auto;
+
+			span {
+				margin-bottom: 10px;
+				font-size: 1rem;
+				span {
+					display: none;
+				}
+			}
+		}
+
+		.copy {
+			font-size: .8125rem;
+			line-height: 1rem;
+			font-weight: $bold;
+			padding-top: 30px;
+			color: #000000;
+
+			strong {
+				display: none;
+			}
+		}
+	}
+
+}
+
+
+
+@media all and (max-width: 680px){
+	.nav {
+		&.nav-topo {
+			ul {
+				li {
+					&.tel-whats {
+						display: none;
+					}
+
+					&.tel-principal {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@media all and (max-width: 480px){
+	h2 {
+		&.title-solo-bottom {
+			width: 100%;
+		}
+	}
+
+	.detalhe-prod {
+		.modo-preparo {
+			.item-preparo {
+				li {
+					padding: 20px 0;
+
+					.nun-preparo {
+						top: 25px;
+						left: 5px;
+					}
+
+					.ico-preparo {
+						width: 150px;
+					}
+
+					.txt-preparo {
+line-height: 1.125rem;
+font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media all and (max-width: 440px){
+	.single-post {
+		.owl-carousel .owl-dots {
+			bottom: -15px;
+
+			.owl-dot {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

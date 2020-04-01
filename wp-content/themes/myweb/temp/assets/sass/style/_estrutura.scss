@@ -1,0 +1,182 @@
+html {
+	font-size: 100%; 
+}
+
+body {
+	position: relative;
+	min-height: 100vh;
+	//min-width: $width;
+	background: #ffffff;
+
+	&.scroll_body {
+		padding-top: 70px;
+	}
+}
+
+body * {
+	font-family: $font-family;
+	color: $cor-txt;
+	line-height: $font-size+.25;
+	font-weight: $light;
+	font-size: $font-size; 
+}
+
+.container {
+	max-width: $width; 
+	width: 100%;//$width; 
+	//width: 100%;
+	padding: 0 $padding-container;
+	margin: 0 auto;
+	position: relative;
+	@include box-sizing;
+	@include clear;
+}
+
+.row {
+	display: block;
+	@include clear();
+
+	&:not(.no-padding){
+		margin-right: ($padding-col)*(-1);
+		margin-left: ($padding-col)*(-1);
+
+		[class*="col-"] {
+			padding-right: $padding-col; 
+			padding-left: $padding-col;
+
+			&.no-padding {
+				padding: 0;
+			}
+		}
+	}
+
+	&.no-padding {
+		margin: 0;
+	}
+
+	[class*="col-"] {
+		float: left;
+		@include box-sizing();
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	@for $i from 1 through 12 {
+		.col-#{$i} {
+			width: $i*(100%/12);
+		}
+	}
+
+	@for $i from 1 through 12 {
+		.col-m-#{$i} {
+			margin-left: $i*(100%/12);
+		}
+	}
+
+	.col-4:nth-child(3n+1) {
+		@include clear;
+	}
+
+	&.row-mini {
+		margin-right: -15px;
+		margin-left: -15px;
+
+		[class*="col-"] {
+			padding-right: 15px; 
+			padding-left: 15px;
+		}
+	}
+}
+
+.box-content {
+	@include clear;
+	@include box-sizing();
+	width: 100%;
+	position: relative;
+	padding: 40px 0;
+
+	&.box-slide {
+		position: relative;
+		z-index: 0;
+		padding-top: 0;
+	}
+
+	.content {
+		width: 100%;
+		max-width: 540px;
+		display: block;
+		margin: 0 auto;
+
+		&.form {
+			max-width: 810px;
+		}
+
+		&.sobre {
+			max-width: 590px;
+		}
+
+		.row {
+			margin-right: -10px;
+			margin-left: -10px;
+
+			[class*="col-"] {
+				padding-right: 10px; 
+				padding-left: 10px;
+			}
+		}
+
+		ul {
+			margin-top: 15px;
+			li {
+				font-size: 1.125rem;
+				line-height: 1.125rem;
+				font-style: italic;
+				color: darken($cor-txt, 20%);
+			}
+		}
+
+		.destaque {
+			width: 100%;
+			display: table;
+			margin-top: 45px;
+
+			span {
+				font-weight: $regular;
+				text-align: justify;
+				font-style: italic;
+				color: $cor6;
+				display: table-cell;
+				vertical-align: middle;
+				font-size: 1.25rem;
+				line-height: 1.5rem;
+				padding: 0px 10px;
+			}
+
+			&:after, &:before {
+				content: '';
+				display: table-cell;
+				vertical-align: middle;				
+				width: 32px;
+				height: 128px;
+				background: url('../images/text-destaque.jpg') no-repeat top center;
+			}
+
+			&:after {
+				@include rotacao(180);
+			}
+		}
+	}
+}
+
+.vertical-center {
+	display: table;
+	height: 100%;
+	width: 100%;
+
+	.content-vertical {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}

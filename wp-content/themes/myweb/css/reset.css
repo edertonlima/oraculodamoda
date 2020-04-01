@@ -1,0 +1,58 @@
+/* -------------------------------------------------------------- 
+  
+   Zerar valores principais
+	 * baseado em http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
+   
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, hr,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, select, input, button, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight:normal;
+	font-weight:inherit;
+	font-weight:lighter;
+	font-style:normal;
+}
+a { text-decoration:none; }
+img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+}
+
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+
+/* Defina o estilo de foco */
+:focus { outline: 0; }
+a { outline: 0; }
+
+/* Lembre-se de reconfigurar caso seja utilizado */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+/* Tabelas ainda precisam de 'cellspacing="0"' no código */
+table { 
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a img { border: none; }
+
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }

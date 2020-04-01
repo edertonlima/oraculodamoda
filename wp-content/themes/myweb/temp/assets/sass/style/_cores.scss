@@ -1,0 +1,231 @@
+// BACGROUND
+.bg-cor1 {
+	background: $cor1;
+}
+
+.bg-cor2 {
+	background: $cor2;
+}
+
+.bg-cor3 {
+	background: $cor3;
+}
+
+.bg-cor4 {
+	background: $cor4;
+}
+
+.bg-cor5 {
+	background: $cor5;
+}
+
+.bg-cor6 {
+	background: $cor6;
+}
+
+.bg-cor7 {
+	background: $cor7;
+}
+
+.bg-cinza {
+	background: $bgclaro;
+}
+
+.bg-azul {
+	background: rgba($azul, .25);
+	
+	&.bg-total {
+		background: $azul;
+	}
+}
+
+.bg-laranja {
+	background: rgba($laranja, .25);
+	
+	&.bg-total {
+		background: $laranja;
+	}
+}
+
+.bg-claro {
+	background-color: $bgclaro;
+}
+
+.bg-escuro {
+	background-color: $bgescuro;
+}
+
+.branco {
+	color: #ffffff;
+}
+
+.button {
+	&.amarelo {
+		background-color: $amarelo;
+		color: #ffffff;
+		border-color: $amarelo;
+
+		&:hover {
+			background-color: darken($amarelo, 10%);
+			border-color: darken($amarelo, 10%);
+		}
+	}
+
+	&.vermelho {
+		background-color: $vermelho;
+		color: #ffffff;
+		border-color: $vermelho;
+
+		&:hover {
+			background-color: darken($vermelho, 10%);
+			border-color: darken($vermelho, 10%);
+		}
+	}
+
+	&.laranja {
+		background-color: $laranja;
+		color: #ffffff;
+		border-color: $laranja;
+
+		&:hover {
+			background-color: darken($laranja, 10%);
+			border-color: darken($laranja, 10%);
+		}
+	}
+
+	&.azul {
+		background-color: $azul;
+		color: #ffffff;
+		border-color: $azul;
+
+		&:hover {
+			background-color: darken($azul, 10%);
+			border-color: darken($azul, 10%);
+		}
+
+		&.transparent {
+			color: $azul;
+			background: transparent;
+
+			&:hover {
+				background-color: $azul;
+				color: #ffffff;
+			}
+		}
+	}
+
+	&.cinza {
+		background-color: $cinza;
+		color: darken($cinza, 30%);
+		border-color: $cinza;
+
+		&:hover {
+			background-color: darken($cinza, 10%);
+			border-color: darken($cinza, 10%);
+		}
+
+		&.transparent {
+			color: darken($cinza, 20%);
+			background: transparent;
+
+			&:hover {
+				background-color: $cinza;
+				color: darken($cinza, 30%);
+			}
+		}
+	}
+}
+
+
+
+// CORES
+.label {
+	&.vermelho {
+		background-color: $vermelho;
+	}
+
+	&.azul {
+		background-color: $azul;
+	}
+
+	&.laranja {
+		background-color: $laranja;
+	}
+}
+
+.cor1 {
+	color: $cor1;
+	i {
+		color: $cor1;
+	}
+	&.link {
+		&:hover {
+			color: $cor3;
+			i {
+				color: $cor3;
+			}
+		}
+	}
+}
+
+.cor2 {
+	color: $cor2;
+}
+
+.cor3 {
+	color: $cor3;
+}
+
+.cor4 {
+	color: $cor4;
+}
+
+.cor5 {
+	color: $cor5;
+}
+
+.cor6 {
+	color: $cor6;
+}
+
+.cor7 {
+	color: $cor7;
+}
+
+.verde-limao {
+	color: $verde-limao;
+}
+
+.cinza {
+	color: $cinza;
+}
+
+.laranja {
+	color: $laranja;
+}
+
+.lilas {
+	color: $lilas;
+}
+
+.verde-claro {
+	color: $verde-claro;
+}
+
+
+
+/* form */
+.form-cor6 {
+	input, textarea {
+		background-color: $cor6;
+	}
+
+	button {
+		color: $cor6;
+		border-color: $cor6;
+
+		&:hover {
+			background-color: $cor6;
+		}
+	}
+}

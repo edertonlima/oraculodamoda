@@ -1,0 +1,409 @@
+.hover-prod {
+	background-color: $bgclaro;
+	display: inline-block;
+	overflow: hidden;
+
+	img {
+		@include animacao;
+	}
+
+	&:hover {
+		img {
+			@include scale-rotate(1.05,-2deg); 
+		}
+	}
+
+	h2 {
+		position: relative;
+		z-index: 99;
+	}
+}
+
+.list-linha-prod {
+	.bloco-img {
+		height: 46vh;
+	}
+
+	.carousel-itens-produtos {
+		width: 100%;
+		padding: 0 35px;
+		.owl-stage-outer {
+			//padding: 0 35px;
+		}
+		.owl-dots {
+			display: none;
+		}
+		.owl-nav {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: 0;
+			width: 100%;
+			margin: 0;
+
+			button {
+				height: auto;
+				margin: -1rem 0 0 0;
+				position: absolute;
+				background: transparent;
+
+				i {
+					font-size: 2rem;
+					color: #bbbbbb;
+				}
+
+				&.owl-prev {
+					left: 10px;
+				}
+				&.owl-next {
+					right: 10px;
+				}
+
+				&.owl-prev, &.owl-next {
+					&:hover {
+						background: transparent!important;
+						i {
+							color: $cor3;
+						}
+					}
+				}
+
+				&.disabled {
+					i {
+						color: #bbbbbb!important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.list-prod {
+	h4 {
+		font-weight: $regular;
+		text-align: center;	
+		margin-bottom: 10px;
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+	} 
+
+	.row {
+		.col-4 {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+.detalhe-prod {
+	.img-produto {
+		width: 100%;
+		border: 3px solid $cor7;
+		border-radius: 10px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.img-tabela {
+		width: 100%;
+		margin: 50px 0;
+
+		img {
+			display: block;
+			width: auto;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	.content {
+		max-width: 380px;
+		margin: 50px 0 0;
+	}
+	.ingredientes {
+
+		.tit-ingredientes {
+			padding-right: 10px;	
+		}
+
+		p, strong, span {
+			color: $cor7;
+		}
+
+		p, span {
+			font-weight: $light;
+			color: $cor7;
+		}
+	}
+
+	.modo-preparo {
+		h3 {
+			padding: 0;
+			font-weight: $bold;
+			margin-bottom: 10px;
+			font-size: 1.5rem;
+
+			i {
+				display: none;
+				font-weight: $bold;
+				font-size: 1.5rem;
+				padding: 5px 5px 5px 15px;
+				position: relative;
+				top: 2px;
+				cursor: pointer;
+				@include animacao;
+			}
+		}
+
+		.item-preparo {
+			@media all and (min-width: 981px){
+				display: block!important;
+			}
+
+			li {
+				padding: 30px 60px 30px 20px;
+				margin-bottom: 20px;
+				display: table;
+				width: 100%;
+				position: relative;
+
+				&:last-child {
+					margin: 0;
+				}
+
+				.ico-preparo, .txt-preparo {
+					display: table-cell;
+					vertical-align: middle;
+				}
+
+				.nun-preparo {
+					position: absolute;
+					top: 30px;
+					left: 20px;
+					text-align: center;
+
+					span {
+						font-size: .85rem;
+						line-height: 24px;
+						color: #ffffff;
+						display: inline-block;
+						width: 24px;
+						height: 24px;
+						border-radius: 50%;
+						background-color: $cor7;
+						position: relative;
+						top: -15px;
+						font-weight: $bold;
+					}
+				}
+
+				.ico-preparo {
+					width: 150px;
+					max-width: none;
+				}
+
+				.txt-preparo, .txt-preparo strong {
+					font-size: .85rem;
+					line-height: 1.125rem;
+				}
+
+				.txt-preparo {
+				 	padding-left: 60px;
+					width: 100%;
+					font-weight: $regular;
+				}
+			}
+		}
+	}
+}
+
+
+
+.list-category {
+	//display: table;
+	width: 100%;
+	margin: 0px 0;
+	padding: 10px 0;
+	text-align: center;
+	height: 110px;
+	@include box-sizing;
+
+	.carousel-list-category {
+
+		.owl-item {
+			&:last-child {
+				margin-right: 0px!important;
+			}
+		}
+
+		.owl-dots {
+			display: none;
+		}
+
+		.owl-nav {
+			position: absolute;
+			top: 50%;
+			height: 0px;
+			margin: 0;
+			width: 100%;
+
+			button {
+				height: 24px;
+				margin: 0;
+				position: absolute;
+				top: -12px;
+
+				i {
+					color: #ffffff;
+					font-size: 1.5rem;
+				}
+
+				&.owl-prev {
+					left: -20px;
+				}
+
+				&.owl-next {
+					right: -20px;
+				}
+
+				&.disabled {
+					display: none;
+				}
+
+				&:hover {
+					background-color: transparent;
+					i {
+						color: $cor1;
+					}
+				}
+			}
+		}
+	}
+
+	.item-category, li {
+		//width: 200px;
+		//padding: 0 10px;
+		//display: table-cell;
+		text-align: center;
+		vertical-align: top;
+
+		a {
+			display: table;
+			margin: 0 auto;
+
+			img, span {
+				width: 82px;
+			}
+
+			img {
+				display: block;
+			}
+
+			.txt {
+				margin-top: 5px;
+				height: 30px;
+				display: table;
+
+				span {
+					display: table-cell;
+					vertical-align: middle;
+					font-size: .8rem;
+					line-height: .9rem;
+					font-weight: $bold;
+					color: #ffffff;
+				}
+			}
+		}
+
+		&.off {
+			a {
+				opacity: 1;
+				//@include grayscale(100%);
+				//transition: all 200ms ease-in-out;
+
+				&:hover {
+					//@include grayscale(0);
+				}
+			}
+		}
+	}
+
+	&.sala-prensa {
+		li {
+			a {
+				img {
+					width: 26px;
+				}
+			}
+		}
+
+	}
+
+	&.contacto {
+		li {
+			vertical-align: top;
+			padding: 0 35px;
+
+			a {
+
+				img, span {
+					margin: 0px auto;
+					display: block;
+				}
+
+				img {
+					width: 55px;
+				}
+
+				span {
+					text-align: center;
+					margin-top: 5px;
+					width: 80px;
+				}
+			}
+		}
+	}
+
+	&.rede-social {
+		margin: 0;
+
+		li {
+			padding: 0 50px;
+
+			a {
+				i {
+					font-size: 2.625rem;
+				}
+
+				&:hover {
+					i {
+						color: $cor2;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.category .list-category .item-category {
+	a {
+		opacity: .5;
+		transition: all 200ms ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&.off {
+		a {
+			opacity: 1;
+		}
+	}
+}
+
+.slide .indicators-category {
+	bottom: 60px;
+}

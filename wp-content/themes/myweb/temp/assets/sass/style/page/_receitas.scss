@@ -1,0 +1,99 @@
+.list-receita {
+	.tit-slide-receita {
+		position: relative;
+		top: 40px;
+		margin-top: -40px;
+		z-index: 99;
+	}
+	.bloco-img {
+		height: 53vh;
+
+		&.slide-receita {
+
+		}
+
+		.mask-item {
+			.tit-receita {
+				font-size: 2.5rem;
+				line-height: 2.5rem;
+				color: #ffffff;
+				font-weight: $bold;
+				max-width: 380px;
+				width: 90%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.owl-carousel {
+		height: 53vh;
+
+		.owl-dots {
+			.owl-dot {
+				&.active {
+					background: $cor2;
+				}
+			}
+		}
+	}
+}
+
+h3.tit-receita {
+	padding: 0 0 20px;
+}
+
+h3.outras-receitas {
+	padding: 0 0 20px;
+}
+
+.list-receita-passo {
+	padding: 0 10px;
+	width: 100%;
+
+	li {
+		display: block;
+		width: 100%;
+		padding-top: 15px;
+		font-size: 1.225rem;
+		line-height: 1.225rem+.15;
+		font-weight: $regular;
+
+		span {
+			font-size: 1.225rem;
+			line-height: 1.225rem+.15;
+			font-weight: $bold;
+			padding-right: 5px;
+		}
+	}
+}
+
+.rede-social-receita {
+	width: 100%;
+	margin: 50px 0;
+	padding: 20px 0 10px;
+	background: rgba(#000,.025);
+	text-align: center;
+
+	h3 {
+		padding: 0;
+	}
+
+	a {
+		display: inline-block;
+		padding: 10px;
+		margin: 15px 5px 0;
+
+		i {
+			font-size: 3.5rem;
+			color: #000000;
+			@include animacao;
+		}
+
+		&:hover {
+			i {
+				color: $cor1;
+			}
+		}
+	}
+}
